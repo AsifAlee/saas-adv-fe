@@ -34,6 +34,13 @@ export default function Results() {
         <div className="grid md:grid-cols-2 gap-12 relative z-10">
           <div>
             <h3 className="text-2xl font-bold mb-4">Why {platform.name}?</h3>
+            
+            {platform.reason && (
+              <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-lg p-4 mb-6 italic text-indigo-200 text-sm">
+                "{platform.reason}"
+              </div>
+            )}
+
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
               {platform.description}
             </p>
